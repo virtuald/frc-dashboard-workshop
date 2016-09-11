@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><body>
+
+Connected: <span id="connected">false</span>
+
+<!-- Include the API -->
+<script src="/networktables/networktables.js"></script>
+
+<script type="text/javascript">
+
+function onConnected(connected) {
+	document.getElementById("connected").textContent = connected;
+}
+
+NetworkTables.addRobotConnectionListener(onConnected, true);
+
+</script></body></html>
